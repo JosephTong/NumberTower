@@ -145,7 +145,7 @@ public class NumberTowerGameManager : MonoBehaviour
             waitTime += Time.deltaTime;
             yield return null;
         }
-        m_Player.NumberText.text = m_PlayerHP.ToString("F0");
+        m_Player.NumberText.text = m_PlayerHP.ToString("0.#");
         waitTime = 0;
         while (waitTime < 0.5f)
         {
@@ -213,7 +213,7 @@ public class NumberTowerGameManager : MonoBehaviour
 
         LevelScriptable level = m_AllLevels[index];
         m_PlayerHP = level.PlayerHp;
-        m_Player.NumberText.text = m_PlayerHP.ToString("F0");
+        m_Player.NumberText.text = m_PlayerHP.ToString("0.#");
         for (int colume = 0; colume < level.Columes.Count; colume++)
         {
             m_RoomsCountInColume.Add(level.Columes[colume].Rooms.Count);

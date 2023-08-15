@@ -45,7 +45,7 @@ public class RoomController : MonoBehaviour
         }
 
         m_ContainedObjectData = m_ContainedObject.GetComponent<ContainedObjectData>();
-        m_ContainedObjectData.NumberText.text = numberText+m_Content.Number.ToString("F0");
+        m_ContainedObjectData.NumberText.text = numberText+m_Content.Number.ToString("0.#");
 
         AnimationClip[] clips = m_ContainedObjectData.ImageAnimator.runtimeAnimatorController.animationClips;
         foreach (AnimationClip clip in clips)
