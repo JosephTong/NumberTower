@@ -1,23 +1,19 @@
 using System.Collections;
-using System.Collections.Generic;
+using UnityEditor;
 using UnityEngine;
 using UnityEngine.Networking;
+using AdvancedEditorTools.Attributes;
 
 public class ReadTsv : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        StartCoroutine(GetCsvData());
+#if UNITY_EDITOR
+    //[MenuItem("Tool/ReadTSV")]
+    [Button("ReadTsv")]
+    private void ReadTsvFile(){
+        StartCoroutine(GetTsvFromGoogle());
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
-    private IEnumerator GetCsvData(){
+    private IEnumerator GetTsvFromGoogle(){
         // room
         UnityWebRequest www = UnityWebRequest.Get("https://docs.google.com/spreadsheets/d/e/2PACX-1vRfQPFboJJNlJ46EeqdMaTNR9GwYHOu5xiuIHuRm6dWsVvSQ10zE0c7ixeqxS857Y59TJ_OPNu_xymB/pub?gid=719668107&single=true&output=tsv");
         yield return www.SendWebRequest();
@@ -45,5 +41,5 @@ public class ReadTsv : MonoBehaviour
             var tmp = json.Split('\t');
         }
     }
-
+#endif
 }

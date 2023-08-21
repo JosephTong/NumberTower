@@ -13,15 +13,16 @@ public class NumberTowerGameManager : MonoBehaviour
 
     [SerializeField] private Transform m_MainRoomCenterPos;
     [SerializeField] private Transform m_MainRoom;
-    [SerializeField] private GameObject m_RoomPrefab;
     [SerializeField] private Transform m_RoomParent;
     [SerializeField] private ContainedObjectData m_Player;
+    private GameObject m_RoomPrefab;
     private int m_CurrentColume = 0;
     private int m_CurrentRoomBreak = 0;
     private float m_PlayerIdleLength = 1;
     private float m_PlayerWinLength = 1;
     private float m_PlayerLoseLength = 1;
     private List<int> m_RoomsCountInColume = new List<int>();
+    private Dictionary<NumberTowerPrefab,GameObject> m_AllRoomContent = new Dictionary<NumberTowerPrefab, GameObject>();
 
     private int m_LevelIndex = 0;
     private bool m_CanAct = true;
@@ -35,8 +36,8 @@ public class NumberTowerGameManager : MonoBehaviour
     [Header("LevelSelect")]
     [SerializeField] private GameObject m_LevelSelect;
     [SerializeField] private Transform m_LevelGrid;
-    [SerializeField] private GameObject m_LevelBtnPrefab;
     [SerializeField] private Button m_LevelSelectBackBtn;
+    private GameObject m_LevelBtnPrefab;
 
     [Header("Lose")]
     [SerializeField] private GameObject m_LosePanel;
@@ -68,6 +69,12 @@ public class NumberTowerGameManager : MonoBehaviour
 
     void Start()
     {
+        m_RoomPrefab = Resources.Load<GameObject>("Prefab/Room");
+        m_LevelBtnPrefab = Resources.Load<GameObject>("Prefab/LevelBtn");
+        m_AllRoomContent.Add( NumberTowerPrefab.WhitePosion, Resources.Load<GameObject>("Prefab/WhitePosion"));
+        m_AllRoomContent.Add( NumberTowerPrefab.Death, Resources.Load<GameObject>("Prefab/Death"));
+        m_AllRoomContent.Add( NumberTowerPrefab.PurplePosion, Resources.Load<GameObject>("Prefab/PurplePosion"));
+
         OnClickBackFromLevelSelect();
         m_StartGameBtn.onClick.AddListener(OnClickStartGame);
         m_ExitBtn.onClick.AddListener(OnClickExitGame);
@@ -229,7 +236,7 @@ public class NumberTowerGameManager : MonoBehaviour
     {
         Transform newRoom = Instantiate(m_RoomPrefab, m_RoomParent).transform;
         newRoom.position = new Vector3((colume + 1) * 7, room * 4, 0);
-        newRoom.GetComponent<RoomController>().Init(roomData, colume);
+        newRoom.GetComponent<RoomController>().Init(roomData, colume, m_AllRoomContent[roomData.Prefab]);
     }
 
     public void SetIsActing(){

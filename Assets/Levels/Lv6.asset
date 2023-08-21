@@ -10,25 +10,25 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 045e6fef0c1a0b24dbe1e95a190070a5, type: 3}
-  m_Name: Lv6
+  m_Name: LV6
   m_EditorClassIdentifier: 
   PlayerHp: 1
   Columes:
   - Rooms:
     - Number: 2
-      BGColor: {r: 1, g: 0.43532923, b: 0, a: 1}
+      BGColor: {r: 0.83137256, g: 0.92941177, b: 0.7372549, a: 1}
       Operations: 4
-      Prefab: {fileID: 2535498343729062692, guid: e44adbec1f0f20b4f972ebb2af321ef3, type: 3}
+      Prefab: 1
     - Number: 4
-      BGColor: {r: 1, g: 0.43532923, b: 0, a: 1}
+      BGColor: {r: 0.83137256, g: 0.92941177, b: 0.7372549, a: 1}
       Operations: 3
-      Prefab: {fileID: 2535498343729062692, guid: e44adbec1f0f20b4f972ebb2af321ef3, type: 3}
+      Prefab: 0
     - Number: 1
-      BGColor: {r: 1, g: 0.43532923, b: 0, a: 1}
+      BGColor: {r: 0.83137256, g: 0.92941177, b: 0.7372549, a: 1}
       Operations: 0
-      Prefab: {fileID: 3629836243428036053, guid: a1378ead8e8244e4abd17bbe647d20ff, type: 3}
+      Prefab: 2
   - Rooms:
     - Number: 2
-      BGColor: {r: 0.010130644, g: 1, b: 0, a: 1}
+      BGColor: {r: 0.78431374, g: 0.5294118, b: 0.41568628, a: 1}
       Operations: 0
-      Prefab: {fileID: 3629836243428036053, guid: a1378ead8e8244e4abd17bbe647d20ff, type: 3}
+      Prefab: 2

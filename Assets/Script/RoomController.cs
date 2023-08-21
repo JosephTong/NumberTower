@@ -18,11 +18,11 @@ public class RoomController : MonoBehaviour
 
     private int m_Colume = 0;
 
-    public void Init(NumberTowerRoomData Content, int colume){
+    public void Init(NumberTowerRoomData Content, int colume,GameObject containedObject){
         m_Colume = colume;
         m_Content = Content;
         m_BG.color = m_Content.BGColor;
-        m_ContainedObject = Instantiate(m_Content.Prefab,m_MidPos);
+        m_ContainedObject = Instantiate(containedObject,m_MidPos);
         m_ContainedObject.transform.localPosition = Vector3.zero;
         string numberText = "";
 

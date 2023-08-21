@@ -18,11 +18,19 @@ public enum NumberTowerOperations
 }
 
 [System.Serializable]
+public enum NumberTowerPrefab
+{
+    WhitePosion = 0 ,
+    PurplePosion ,
+    Death 
+}
+
+[System.Serializable]
 public class NumberTowerRoomData 
 {
     public float Number = 0;
     public Color BGColor;
     public NumberTowerOperations Operations = NumberTowerOperations.Add;
-    public GameObject Prefab;
+    public NumberTowerPrefab Prefab;
 
 }

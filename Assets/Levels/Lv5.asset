@@ -10,52 +10,37 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 045e6fef0c1a0b24dbe1e95a190070a5, type: 3}
-  m_Name: Lv5
+  m_Name: LV5
   m_EditorClassIdentifier: 
   PlayerHp: 2
   Columes:
   - Rooms:
     - Number: 0
-      BGColor: {r: 0.7924528, g: 0.7532258, b: 0.43734425, a: 1}
+      BGColor: {r: 0.78431374, g: 0.7411765, b: 0.41568628, a: 1}
       Operations: 0
-      Prefab: {fileID: 3629836243428036053, guid: a1378ead8e8244e4abd17bbe647d20ff, type: 3}
+      Prefab: 2
   - Rooms:
     - Number: 1
-      BGColor: {r: 0.7921569, g: 0.4392157, b: 0.47299394, a: 1}
+      BGColor: {r: 1, g: 0, b: 0, a: 1}
       Operations: 0
-      Prefab: {fileID: 3629836243428036053, guid: a1378ead8e8244e4abd17bbe647d20ff, type: 3}
+      Prefab: 2
   - Rooms:
     - Number: 0
-      BGColor: {r: 0.7924528, g: 0.7532258, b: 0.43734425, a: 1}
+      BGColor: {r: 0.78431374, g: 0.7411765, b: 0.41568628, a: 1}
       Operations: 0
-      Prefab: {fileID: 3629836243428036053, guid: a1378ead8e8244e4abd17bbe647d20ff, type: 3}
-  - Rooms:
-    - Number: 0
-      BGColor: {r: 0.7924528, g: 0.7532258, b: 0.43734425, a: 1}
-      Operations: 0
-      Prefab: {fileID: 3629836243428036053, guid: a1378ead8e8244e4abd17bbe647d20ff, type: 3}
-  - Rooms:
-    - Number: 0
-      BGColor: {r: 0.7924528, g: 0.7532258, b: 0.43734425, a: 1}
-      Operations: 0
-      Prefab: {fileID: 3629836243428036053, guid: a1378ead8e8244e4abd17bbe647d20ff, type: 3}
-  - Rooms:
-    - Number: 0
-      BGColor: {r: 0.7924528, g: 0.7532258, b: 0.43734425, a: 1}
-      Operations: 0
-      Prefab: {fileID: 3629836243428036053, guid: a1378ead8e8244e4abd17bbe647d20ff, type: 3}
+      Prefab: 2
   - Rooms:
     - Number: 1
-      BGColor: {r: 0.7921569, g: 0.45303488, b: 0.4392157, a: 1}
+      BGColor: {r: 1, g: 0, b: 0, a: 1}
       Operations: 0
-      Prefab: {fileID: 3629836243428036053, guid: a1378ead8e8244e4abd17bbe647d20ff, type: 3}
+      Prefab: 2
   - Rooms:
-    - Number: 0
-      BGColor: {r: 0.7924528, g: 0.7532258, b: 0.43734425, a: 1}
+    - Number: 1
+      BGColor: {r: 1, g: 0, b: 0, a: 1}
       Operations: 0
-      Prefab: {fileID: 3629836243428036053, guid: a1378ead8e8244e4abd17bbe647d20ff, type: 3}
+      Prefab: 2
   - Rooms:
-    - Number: 0
-      BGColor: {r: 0.7924528, g: 0.7532258, b: 0.43734425, a: 1}
+    - Number: 2
+      BGColor: {r: 1, g: 0, b: 0, a: 1}
       Operations: 0
-      Prefab: {fileID: 3629836243428036053, guid: a1378ead8e8244e4abd17bbe647d20ff, type: 3}
+      Prefab: 2
