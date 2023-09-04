@@ -1296,12 +1296,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_AllLevels:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 11400000, guid: 00b90589f49198e418687d247c9a8d0a, type: 2}
+  - {fileID: 11400000, guid: 785ee780ed89dbe4eacc5191636bb299, type: 2}
+  - {fileID: 11400000, guid: 96b18a742dbb5314daafb3c3d695af16, type: 2}
+  - {fileID: 11400000, guid: 30a0a5edcb70c1547aaa5731b3900f97, type: 2}
+  - {fileID: 11400000, guid: 87ab36ebe011aac42904beaaac3e6f71, type: 2}
+  - {fileID: 11400000, guid: 7742e4b8f04fde84f876928fccd44475, type: 2}
   m_MainRoomCenterPos: {fileID: 1879657461}
   m_MainRoom: {fileID: 1517378564787023298}
   m_RoomParent: {fileID: 1859621418}
@@ -1347,6 +1347,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_LevelPath: Assets/Levels
   m_ResourcesPath: Assets/Resources
+  m_NumberTowerGameManager: {fileID: 671159190}
 --- !u!1 &695345859
 GameObject:
   m_ObjectHideFlags: 0
@@ -3303,12 +3304,12 @@ MonoBehaviour:
   baseInspectorFoldout: 0
   layoutInfos: []
   buttonMethods:
-  - rid: 3592151859757580292
-  - rid: 3592151859757580293
+  - rid: 3592151860186447878
+  - rid: 3592151860186447879
   references:
     version: 2
     RefIds:
-    - rid: 3592151859757580292
+    - rid: 3592151860186447878
       type: {class: ButtonInfo, ns: AdvancedEditorTools, asm: Assembly-CSharp}
       data:
         methodName: SaveCsvFile
@@ -3316,7 +3317,7 @@ MonoBehaviour:
         foldout: 1
         buttonSize: 12
         parameters: []
-    - rid: 3592151859757580293
+    - rid: 3592151860186447879
       type: {class: ButtonInfo, ns: AdvancedEditorTools, asm: Assembly-CSharp}
       data:
         methodName: ReadCsvFile

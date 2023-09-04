@@ -136,6 +136,14 @@ public class NumberTowerGameManager : MonoBehaviour
         }
     }
 
+    public void ClearAllLevel(){
+        m_AllLevels.Clear();
+    }
+
+    public void AddLevelScriptable(LevelScriptable levelScriptable){
+        m_AllLevels.Add(levelScriptable);
+    }
+
     private void TurnOffAllPanel(){
         m_MainMenu.SetActive(false);
         m_LevelSelect.SetActive(false);

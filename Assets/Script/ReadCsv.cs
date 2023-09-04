@@ -11,6 +11,7 @@ public class ReadCsv : MonoBehaviour
     //[SerializeField] private NumberTowerGameManager m_NumberTowerGameManager;
     [SerializeField] private string m_LevelPath = "";
     [SerializeField] private string m_ResourcesPath = "";
+    [SerializeField] private NumberTowerGameManager m_NumberTowerGameManager;
 #if UNITY_EDITOR
     //[MenuItem("Tool/ReadCSV")]
     [Button("SaveCsv")]
@@ -55,6 +56,7 @@ public class ReadCsv : MonoBehaviour
         json = Resources.Load<TextAsset>("Level").ToString();
         contents = json.Split('\n',',');
             // level
+            m_NumberTowerGameManager.ClearAllLevel();
             for (int i = 4; i < contents.Length; i=i+4)
             {
                 //Debug.Log(contents[i]);
@@ -83,6 +85,9 @@ public class ReadCsv : MonoBehaviour
                 }
 
                 AssetDatabase.CreateAsset(levelScriptable, path);
+                AssetDatabase.SaveAssets();
+                AssetDatabase.Refresh();
+                m_NumberTowerGameManager.AddLevelScriptable(levelScriptable);
             }
         
         AssetDatabase.SaveAssets();
