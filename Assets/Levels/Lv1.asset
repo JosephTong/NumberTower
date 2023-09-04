@@ -15,11 +15,11 @@ MonoBehaviour:
   PlayerHp: 1
   Columes:
   - Rooms:
-    - Number: 10
+    - Number: 9
       BGColor: {r: 0.78431374, g: 0.7411765, b: 0.41568628, a: 1}
       Operations: 0
       Prefab: 2
-    - Number: 10
+    - Number: 11
       BGColor: {r: 0.78431374, g: 0.7411765, b: 0.41568628, a: 1}
       Operations: 1
       Prefab: 0
